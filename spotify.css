@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -11,7 +14,7 @@ header {
   top: 0;
 }
 .left-margin {
-  border-left: 2px solid;
+  border-left: 2px solid black;
   padding-left: 5px;
 }
 .left-side {
@@ -54,7 +57,6 @@ section {
   margin-left: 5px;
 }
 main {
-  height: 320px;
   background: rgba(70, 180, 85, 0.8);
   text-align: center;
   margin: 40px;
@@ -63,9 +65,15 @@ main {
 
 footer {
   background: rgba(70, 180, 85, 0.4);
-  height: 400px;
+  height: 500px;
   color: black;
   padding: 95px 60px 40px 60px;
+  position: relative;
+}
+.footer-right {
+  position: absolute;
+  bottom: 51px;
+  right: 55px;
 }
 
 .button {
@@ -167,22 +175,95 @@ footer {
   color: white;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     margin: 0;
     font-family: "Fredoka One", cursive;
   }
   header {
-    display: flex;
     justify-content: space-between;
-    background: rgba(70, 180, 85, 0.8);
+    display: flex;
+    background: rgba(70, 180, 85, 0.5);
     color: black;
     align-items: center;
     height: 70px;
     z-index: 99;
     width: 100%;
-    position: fixed;
     top: 0;
     font-size: small;
   }
+
+  .plain-text {
+    color: aliceblue;
+  }
+  .terms {
+    color: brown;
+  }
+  .footer-1 {
+    display: block;
+  }
+  .company {
+    margin-top: 60px;
+  }
+  .communities {
+    margin-top: 40px;
+  }
+  .useful-links {
+    margin-top: 40px;
+  }
+  main {
+    margin: 28px;
+  }
+  .footer-left {
+    font-size: 9px;
+  }
+  .footer-right {
+    font-size: 9px;
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+  }
+  footer {
+    height: auto;
+    position: relative;
+  }
+
+  .left-margin {
+    margin: 0px;
+    border: 0;
+  }
+
+  .button-main {
+    background-color: white;
+    border-radius: 28px;
+    border: 1px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    font-family: Arial;
+    font-size: 13px;
+    padding: 9px 22px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px white;
+  }
+  .button {
+    background-color: white;
+    border-radius: 28px;
+    border: 1px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    font-family: Arial;
+    font-size: 13px;
+    padding: 9px 22px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px white;
+  }
+}
+
+@media screen and (max-width: 420px) {
 }
